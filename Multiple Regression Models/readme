@@ -6,7 +6,7 @@ Model 1: R-Square = 0.344
 Model 2: R-Square = 0.291
   Description: I designed Model 2 using PCA and put every variable in the model. I made dummy variables from categorical variables and       standardized the variables too.
  
-Model 3: R-Square = 0.344
+Model 3: R-Square = 0.341
   Description: I designed Model 3 from Model 1 trying to use Backward Elimination for the Multiple Regression. Since there were a lot of     variables, I used group Backward Elimination, meaning I took out all p-values containing 0.9 and above during the first elimination, 0-8   and above during the second elimination and so on. I put every variables at first, and took out the p-values more than 0.05.
   
 Visualization Exercise with Matplotlib: This is when I visualized independent variables with the dependent variable to see how the data was distributed. The upcoming models are based on this visualization.
@@ -19,7 +19,7 @@ Model 5: R-square = 0.258 - 0.322
   
 After building all these models, I decided it is time to deal with outliers and see the performance change. So, from Model 6 onwards, all the outliers are taken care of.
 
-Model 6: R-square = ~0.29
+Model 6: R-square = ~0.23
   Description: I deleted the outliers which were about 20% of the data and trained my model on the remaining data. However the R square     was less than before. I also deleted the columns that had less than 0.1 collinearity score with the independent variable, and more than   0.6 collinearity score among dependent variables to reduce multicollinearity.
   
 What's next?
