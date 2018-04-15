@@ -1,1 +1,27 @@
+Model 1: R-Square = 0.344
+  Description: I designed my Model 1 to be a base model for all my other Models. I put every variable in the base model, and made dummy     variables for categorical variables recognized as objects in pandas DataFrame.
+  I also did not delete any outliers.
+  Note: My models where I started deleting outliers start from Model 6.
 
+Model 2: R-Square = 0.291
+  Description: I designed Model 2 using PCA and put every variable in the model. I made dummy variables from categorical variables and       standardized the variables too.
+ 
+Model 3: R-Square = 0.344
+  Description: I designed Model 3 from Model 1 trying to use Backward Elimination for the Multiple Regression. Since there were a lot of     variables, I used group Backward Elimination, meaning I took out all p-values containing 0.9 and above during the first elimination, 0-8   and above during the second elimination and so on. I put every variables at first, and took out the p-values more than 0.05.
+  
+Visualization Exercise with Matplotlib: This is when I visualized independent variables with the dependent variable to see how the data was distributed. The upcoming models are based on this visualization.
+  
+Model 4: R-square = 0.339
+  Description: Using the Visualization Exercise with Matplotlib file, I got the idea of how the data was being distributed and I started     many tests to figure out which variables to delete and which to keep. I found out correlations between dependent vs independent           variables and dependent vs dependent variables to delete multi-collinearity and see which variables are linear to test assumptions of     multiple regression model.
+  
+Model 5: R-square = 0.258 - 0.322
+  Description: For this model I used PCA(Principal Component Analysis) and FA(Factor Analysis) using both standardized and non-             standardized values using Model 4.
+  
+After building all these models, I decided it is time to deal with outliers and see the performance change. So, from Model 6 onwards, all the outliers are taken care of.
+
+Model 6: R-square = ~0.29
+  Description: I deleted the outliers which were about 20% of the data and trained my model on the remaining data. However the R square     was less than before. I also deleted the columns that had less than 0.1 collinearity score with the independent variable, and more than   0.6 collinearity score among dependent variables to reduce multicollinearity.
+  
+What's next?
+
+I have decided to start applying other regression models. Multiple Regression assumes that the independent variables are linear, however our pearsons'r and spearmans'r were not even 0.5. I tried multiple regression to get the feel of the data, and know the limitaions of multiple regression.
